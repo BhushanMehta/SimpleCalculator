@@ -1,0 +1,62 @@
+$Operator-key_bg : rgb(136, 136, 136);
+$Opertaor-key_border : rgb(117, 116, 116);
+
+.default-style {
+  margin: 5px;
+  line-height: 2rem;
+  text-align:center;
+}
+
+.operation_field { 
+  @extend .default-style;
+  width: 90%;
+  border: rgb(75, 74, 74) solid 1px;  
+  font-size: 18px;
+  padding:0px 5px ;
+}
+.calc_keypad {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  flex-wrap: wrap;
+  padding: 10px;
+  border: #555454 outset 10px;
+  margin: auto;
+  background: #423f3f;
+}
+.number_key {
+  @extend .default-style;
+  width: 28%;  
+  font-size: 18px;
+  background: #c7c7c7;
+  border: #aba3a3 solid 1px;  
+  cursor: pointer; 
+  &:hover {
+    background: #9c9a9a;
+    border: #7d7d7d solid 1px;
+  }
+}
+.operator_key {
+  @extend .default-style;
+  width: 28.8%;
+  font-size: 24px;
+  background: $Operator-key_bg;
+  border: $Opertaor-key_border solid 1px;  
+  cursor: pointer;
+  &:hover {
+    background: #9c9a9a;
+    border: #7d7d7d solid 1px;
+  }
+}
+.operator_key:hover,.special_key:hover{
+  background:  rgb(107, 103, 103);
+  border:rgb(93, 85, 85) solid 1px;
+}
+.special_key {
+  @extend .default-style;  
+  cursor: pointer;
+  width:94.8%;
+  font-size: 18px;  
+  background: $Operator-key_bg;
+  border:$Opertaor-key_border solid 1px;
+}
